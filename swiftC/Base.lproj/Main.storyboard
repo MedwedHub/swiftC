@@ -76,7 +76,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bsd-4k-Nje">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -91,6 +91,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5AR-Y2-2cB"/>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem image="Star_off" id="wgK-BW-fmD">
+                            <connections>
+                                <action selector="press:" destination="VlM-N6-j9G" id="2UO-3Z-JH9"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="cityLabel" destination="bsd-4k-Nje" id="bVs-JB-TFu"/>
                     </connections>
@@ -118,4 +126,7 @@
             <point key="canvasLocation" x="-305" y="404"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Star_off" width="29" height="28"/>
+    </resources>
 </document>
