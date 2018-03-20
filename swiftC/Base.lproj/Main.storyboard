@@ -67,7 +67,7 @@
             </objects>
             <point key="canvasLocation" x="460" y="403"/>
         </scene>
-        <!--Title-->
+        <!--City`s info-->
         <scene sceneID="vgq-rb-GQt">
             <objects>
                 <viewController id="VlM-N6-j9G" customClass="CityViewController" customModule="swiftC" customModuleProvider="target" sceneMemberID="viewController">
@@ -92,7 +92,7 @@
                         <viewLayoutGuide key="safeArea" id="5AR-Y2-2cB"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Title" id="8Ea-fb-a0z">
+                    <navigationItem key="navigationItem" title="City`s info" id="8Ea-fb-a0z">
                         <barButtonItem key="rightBarButtonItem" image="Star_off" id="wgK-BW-fmD">
                             <connections>
                                 <action selector="press:" destination="VlM-N6-j9G" id="2UO-3Z-JH9"/>
