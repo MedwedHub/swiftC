@@ -10,7 +10,7 @@ import UIKit
 
 class CustomTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var cellView: UIView!
+   // @IBOutlet weak var cellView: UIView!
     @IBOutlet weak var favCityImage: UIImageView!
     @IBOutlet weak var cityLabel: UILabel!
     

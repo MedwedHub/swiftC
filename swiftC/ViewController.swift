@@ -45,7 +45,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.favCityImage.image = UIImage(named: "Star_on")!
         
         if !favourite {
-            cell.favCityImage.isHidden = true            
+            cell.favCityImage.isHidden = true
         } else {
             cell.favCityImage.isHidden = false
         }
