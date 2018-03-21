@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,23 +23,39 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CityCell" textLabel="G13-bx-34n" style="IBUITableViewCellStyleDefault" id="nLo-WH-x51">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CityCell" rowHeight="88" id="nLo-WH-x51" customClass="CustomTableViewCell" customModule="swiftC" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="88"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nLo-WH-x51" id="1JP-TM-GpS">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="87.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="G13-bx-34n">
-                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SLa-dp-l35">
+                                                    <rect key="frame" x="7" y="-12" width="334" height="111"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Star_on" translatesAutoresizingMaskIntoConstraints="NO" id="Jcu-rh-hHq">
+                                                    <rect key="frame" x="349" y="33" width="21" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="FUN-vz-63C"/>
+                                                        <constraint firstAttribute="width" constant="21" id="K1m-Pb-JpE"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="SLa-dp-l35" firstAttribute="centerY" secondItem="1JP-TM-GpS" secondAttribute="centerY" id="LbA-6j-9sk"/>
+                                                <constraint firstItem="SLa-dp-l35" firstAttribute="top" secondItem="1JP-TM-GpS" secondAttribute="topMargin" constant="-23" id="NDN-XK-kPn"/>
+                                                <constraint firstItem="Jcu-rh-hHq" firstAttribute="leading" secondItem="SLa-dp-l35" secondAttribute="trailing" constant="8" symbolic="YES" id="YTT-RO-ipI"/>
+                                                <constraint firstItem="SLa-dp-l35" firstAttribute="centerY" secondItem="Jcu-rh-hHq" secondAttribute="centerY" id="adv-sc-zIv"/>
+                                                <constraint firstItem="SLa-dp-l35" firstAttribute="leading" secondItem="1JP-TM-GpS" secondAttribute="leadingMargin" constant="-8" id="gUU-sd-thj"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Jcu-rh-hHq" secondAttribute="trailing" constant="-10" id="qi8-DU-oNP"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="cityLabel" destination="SLa-dp-l35" id="g4Z-6C-d3S"/>
+                                            <outlet property="favCityImage" destination="Jcu-rh-hHq" id="RYf-eN-UfG"/>
                                             <segue destination="VlM-N6-j9G" kind="show" id="GRq-dQ-Ofi"/>
                                         </connections>
                                     </tableViewCell>
@@ -65,7 +82,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="460" y="403"/>
+            <point key="canvasLocation" x="460" y="402.54872563718146"/>
         </scene>
         <!--City`s info-->
         <scene sceneID="vgq-rb-GQt">
@@ -129,5 +146,6 @@
     </scenes>
     <resources>
         <image name="Star_off" width="29" height="28"/>
+        <image name="Star_on" width="29" height="28"/>
     </resources>
 </document>

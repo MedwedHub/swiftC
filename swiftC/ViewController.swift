@@ -21,29 +21,45 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
+        
         return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         return Data.shared.cities.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
         return 45.0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CityCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CityCell", for: indexPath) as! CustomTableViewCell
         let city = Data.shared.cities[indexPath.row]
-        cell.textLabel?.text = "\(city.name)" + " with \(city.id)"
+        let favourite = Data.shared.isFavourite(city: city)
+        
+        cell.cityLabel.text = "\(city.name)" + " with \(city.id)"
+        cell.favCityImage.image = UIImage(named: "Star_on")!
+        
+        if !favourite {
+            cell.favCityImage.isHidden = true            
+        } else {
+            cell.favCityImage.isHidden = false
+        }
         
         return cell
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let cityVC: CityViewController? = segue.destination as? CityViewController
+    override func viewWillAppear(_ animated: Bool) {
         
+        tableView.reloadData()
+        
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let cityVC: CityViewController? = segue.destination as? CityViewController
         let indexPath = tableView.indexPathForSelectedRow
         let city = Data.shared.cities[indexPath!.row]
         

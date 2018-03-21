@@ -18,6 +18,7 @@
 		C66472BC2060FD5E0080A99E /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66472BB2060FD5E0080A99E /* Data.swift */; };
 		C66472BE2060FDAF0080A99E /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66472BD2060FDAF0080A99E /* City.swift */; };
 		C66472C02061006A0080A99E /* CityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66472BF2061006A0080A99E /* CityViewController.swift */; };
+		C6B6E5702062F2BA005BE1EA /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B6E56F2062F2BA005BE1EA /* CustomTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		C66472BB2060FD5E0080A99E /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		C66472BD2060FDAF0080A99E /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		C66472BF2061006A0080A99E /* CityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityViewController.swift; sourceTree = "<group>"; };
+		C6B6E56F2062F2BA005BE1EA /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				C66472BB2060FD5E0080A99E /* Data.swift */,
 				C66472BD2060FDAF0080A99E /* City.swift */,
 				C66472BF2061006A0080A99E /* CityViewController.swift */,
+				C6B6E56F2062F2BA005BE1EA /* CustomTableViewCell.swift */,
 			);
 			path = swiftC;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				C664728B2060FC250080A99E /* ViewController.swift in Sources */,
 				C66472BE2060FDAF0080A99E /* City.swift in Sources */,
 				C66472BC2060FD5E0080A99E /* Data.swift in Sources */,
+				C6B6E5702062F2BA005BE1EA /* CustomTableViewCell.swift in Sources */,
 				C66472892060FC250080A99E /* AppDelegate.swift in Sources */,
 				C66472912060FC250080A99E /* swiftC.xcdatamodeld in Sources */,
 				C66472C02061006A0080A99E /* CityViewController.swift in Sources */,
