@@ -9,7 +9,7 @@
 import UIKit
 
 struct User {
-    var name: String?
+    var name: String? 
     var birthDay: Date?
     var avatar: UIImage?
 }

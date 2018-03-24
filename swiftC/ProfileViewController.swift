@@ -41,7 +41,7 @@ class ProfileViewController: UIViewController {
     func textFieldDidEndEditing(_ textField: UITextField) {
         if let text = textField.text, text.count > 0 {
             user.name = text
-            userManager.changeUser(user)
+            userManager.changeUser(user)        
         }
     }
     
