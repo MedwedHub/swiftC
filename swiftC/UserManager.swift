@@ -9,11 +9,13 @@
 import UIKit
 
 class UserManager {
-    //let defaults = UserDefault.s
+    private let user = User()
+    
     func getCurrentUser() -> User {
         let name = UserDefaults.standard.string(forKey: "nameKey")
         let birthDay = UserDefaults.standard.object(forKey: "birthDayKey") as? Date
         let user = User(name: name, birthDay: birthDay, avatar: nil)
+        
         return user
     }
     func changeUser(_ user: User) {
