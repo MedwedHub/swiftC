@@ -23,9 +23,12 @@ import UIKit
         UserDefaults.standard.set(user.birthDay, forKey: "birthDayKey")
     }
 }*/
+protocol UserManagerDelegate {
+    
+}
 
 class UserManager {
-
+  var delegate: UserManagerDelegate?
   var user: User {
     get {
       let name = UserDefaults.standard.string(forKey: "nameKey")
