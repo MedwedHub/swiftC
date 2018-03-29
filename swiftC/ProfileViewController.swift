@@ -14,7 +14,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var birthField: UITextField!
     @IBOutlet weak var nameField: UITextField!
     private var datePicker: UIDatePicker!
-    private var user: User!
+//    private var user: User!
     private var userManager: UserManager!
     
     override func viewDidLoad() {
