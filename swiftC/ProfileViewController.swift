@@ -23,8 +23,8 @@ class ProfileViewController: UIViewController {
         configureDate()
         birthField.inputView = datePicker
         userManager = UserManager()
-        user = userManager.getCurrentUser()
-        nameField.text = user.name
+        //user = userManager.getCurrentUser()
+        nameField.text = userManager.user.name
         let dateToString: String
         if let date = user.birthDay {
             let dateFormatter = DateFormatter()
