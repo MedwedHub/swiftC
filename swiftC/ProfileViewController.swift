@@ -26,7 +26,7 @@ class ProfileViewController: UIViewController {
         //user = userManager.getCurrentUser()
         nameField.text = userManager.user.name
         let dateToString: String
-        if let date = user.birthDay {
+        if let date = userManager.user.birthDay {
             let dateFormatter = DateFormatter()
             dateToString = dateFormatter.string(from: date)
             birthField.text = dateToString
@@ -63,8 +63,8 @@ class ProfileViewController: UIViewController {
     }
     func textFieldDidEndEditing(_ textField: UITextField) {
         if let text = textField.text, text.count > 0 {
-            user.name = text
-            userManager.changeUser(user)
+            userManager.user.name = text
+            //userManager.changeUser(user)
             print("Username changed")
             if let name = UserDefaults.standard.string(forKey: "nameKey"){
             print(name)
